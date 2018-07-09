@@ -1,0 +1,10 @@
+/* Custom styles for A11YChiCamp */
+
+/*                */
+/* *** RESETS *** */
+/*                */
+
+header#masthead{
+	background-color: #ffffff;
+	box-shadow: none;
+}
