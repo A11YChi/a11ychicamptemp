@@ -271,3 +271,10 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+/* Custom A11YChiCamp Styles and Scripts */
+// Register Style
+function a11ychicamp_styles() {
+    wp_enqueue_style( 'A11YChiCamp', get_template_directory_uri() . '/A11YChiCamp.css', false, '0.1' );
+}
+add_action( 'wp_enqueue_scripts', 'a11ychicamp_styles' );
