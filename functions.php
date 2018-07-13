@@ -124,8 +124,8 @@ function wp_bootstrap_starter_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Footer 1', 'wp-bootstrap-starter' ),
@@ -133,8 +133,8 @@ function wp_bootstrap_starter_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Footer 2', 'wp-bootstrap-starter' ),
@@ -142,8 +142,8 @@ function wp_bootstrap_starter_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Footer 3', 'wp-bootstrap-starter' ),
@@ -151,8 +151,8 @@ function wp_bootstrap_starter_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
     ) );
 }
 add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
@@ -175,28 +175,28 @@ function wp_bootstrap_starter_scripts() {
         wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
-        wp_enqueue_style( 'wp-bootstrap-starter-poppins-lora-font', '//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
+        wp_enqueue_style( 'wp-bootstrap-starter-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'montserrat-merriweather') {
-        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-merriweather-font', '//fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900|Montserrat:300,400,400i,500,700,800' );
+        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-merriweather-font', 'https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900|Montserrat:300,400,400i,500,700,800' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-poppins') {
-        wp_enqueue_style( 'wp-bootstrap-starter-poppins-font', '//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
+        wp_enqueue_style( 'wp-bootstrap-starter-poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'roboto-roboto') {
-        wp_enqueue_style( 'wp-bootstrap-starter-roboto-font', '//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' );
+        wp_enqueue_style( 'wp-bootstrap-starter-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'arbutusslab-opensans') {
-        wp_enqueue_style( 'wp-bootstrap-starter-arbutusslab-opensans-font', '//fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,300i,400,400i,600,600i,700,800' );
+        wp_enqueue_style( 'wp-bootstrap-starter-arbutusslab-opensans-font', 'https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,300i,400,400i,600,600i,700,800' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'oswald-muli') {
-        wp_enqueue_style( 'wp-bootstrap-starter-oswald-muli-font', '//fonts.googleapis.com/css?family=Muli:300,400,600,700,800|Oswald:300,400,500,600,700' );
+        wp_enqueue_style( 'wp-bootstrap-starter-oswald-muli-font', 'https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800|Oswald:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'montserrat-opensans') {
-        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-opensans-font', '//fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,300i,400,400i,600,600i,700,800' );
+        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-opensans-font', 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,300i,400,400i,600,600i,700,800' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'robotoslab-roboto') {
-        wp_enqueue_style( 'wp-bootstrap-starter-robotoslab-roboto', '//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:300,300i,400,400i,500,700,700i' );
+        wp_enqueue_style( 'wp-bootstrap-starter-robotoslab-roboto', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:300,300i,400,400i,500,700,700i' );
     }
     if(get_theme_mod( 'preset_style_setting' ) && get_theme_mod( 'preset_style_setting' ) !== 'default') {
         wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
