@@ -12,16 +12,6 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121615799-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-121615799-1');
-    </script>
-
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,27 +22,32 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
-	
-	<?php
+	<div class="container" style="overflow:hidden;height:auto;">
+		<div class="menu-block float-left no-pad hidden-xs">
+			<a class="skip-link" href="#content">
+				<?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?>
+			</a>
+		</div>
+    
+		<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+
+		<div class="menu-block float-right no-pad">
+		<?php
                 wp_nav_menu(array(
                 'theme_location'    => 'secondary',
-                'container'       => 'div',
-                'container_id'    => 'secondary-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'container'       => 'nav',
+                'container_id'    => 'sec-nav',
+                'container_class' => '',
                 'menu_id'         => false,
-                'menu_class'      => 'sec-nav',
+                'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker()
                 ));
-                ?>
-	
-	
-	
-	
-	
-    <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+        ?>
+		</div>
+		
+	</div>
 	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
         <div class="container">
             <nav class="navbar navbar-expand-xl p-0">
